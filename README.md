@@ -55,29 +55,6 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
----
-
-## Publishing to GitHub
-
-To upload your local SentinelLog project to GitHub:
-
-1. Create a new repository on GitHub (e.g., `SentinelLog`).
-2. Open a terminal in your project root (`C:\Users\navee\Desktop\SentinelLog`).
-3. Run the following commands:
-
-	```sh
-	git init
-	git add .
-	git commit -m "Initial commit"
-	git remote add origin https://github.com/naveensajeendran/SentinelLog.git
-	git branch -M main
-	git push -u origin main
-	```
-
-Your project will now be published to your GitHub repository.
-
----
-
 ## Usage
 
 Run the main module to scan logs:
