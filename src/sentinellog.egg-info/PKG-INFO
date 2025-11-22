@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: sentinellog
+Version: 0.1.0
+Summary: Lightweight open-source threat detection framework
+Author-email: Naveen Sajeendran <Naveen.Sajeendran@gmail.com>
+Requires-Python: >=3.10
+Requires-Dist: rich
+Requires-Dist: pytest

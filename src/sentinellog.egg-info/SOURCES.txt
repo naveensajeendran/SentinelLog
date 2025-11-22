@@ -1,0 +1,16 @@
+pyproject.toml
+setup.cfg
+src/sentinellog/_init_.py
+src/sentinellog/alerts.py
+src/sentinellog/detector.py
+src/sentinellog/main.py
+src/sentinellog/parser.py
+src/sentinellog/rules.py
+src/sentinellog/utils.py
+src/sentinellog.egg-info/PKG-INFO
+src/sentinellog.egg-info/SOURCES.txt
+src/sentinellog.egg-info/dependency_links.txt
+src/sentinellog.egg-info/requires.txt
+src/sentinellog.egg-info/top_level.txt
+src/sentinellog/tests/_init_.py
+src/sentinellog/tests/test_detector.py

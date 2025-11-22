@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sentinellog"
+version = "0.1.0"
+description = "Lightweight open-source threat detection framework"
+authors = [{name = "Naveen Sajeendran", email = "Naveen.Sajeendran@gmail.com"}]
+requires-python = ">=3.10"
+dependencies = [
+    "rich",
+    "pytest"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
