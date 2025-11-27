@@ -4,32 +4,6 @@ A production-ready, lightweight **log analysis and threat detection framework** 
 
 ---
 
-##  Quick Start
-
-### Local Development
-```bash
-# Clone and setup
-git clone https://github.com/naveensajeendran/SentinelLog.git
-cd SentinelLog
-pip install -r requirements.txt
-
-# Run tests
-cd src
-python -m pytest -v
-
-# Start API
-python -m uvicorn sentinellog.api.main:app --reload
-# Visit http://localhost:8000/docs
-```
-
-### Docker
-```bash
-docker build -t sentinellog:latest .
-docker run -p 8000:8000 sentinellog:latest
-```
-
----
-
 ##  Key Features
 
 -  **Pattern-Based Detection**  YAML-defined rules for flexible threat detection
@@ -48,50 +22,6 @@ docker run -p 8000:8000 sentinellog:latest
 - **[DEPLOYMENT.md](DEPLOYMENT.md)**  Complete deployment guide (local, Docker, AWS ECS)
 - **[SCALING_SUMMARY.md](SCALING_SUMMARY.md)**  Production readiness checklist and scaling strategy
 - **API Docs**  Available at `/docs` (Swagger) and `/openapi.json` when running
-
----
-
-##  Architecture
-
-### Project Structure
-```
-SentinelLog/
- src/sentinellog/
-    api/                          # FastAPI service
-       main.py                   # App definition, health endpoints
-       routes/scan_routes.py     # Threat scanning endpoints
-       services/detection_service.py  # Business logic
-    core/                         # Core detection engine
-       detector.py               # ThreatDetector class
-       rule_engine.py            # YAML rule parser & evaluator
-       parser.py                 # Log file parser
-       threats.py                # Threat dataclass
-       utils.py                  # Helper functions
-    alerts/                       # Alert integrations
-       base.py                   # BaseAlert ABC
-       email_alert.py            # Email alerts
-       slack_alert.py            # Slack integration
-       webhook_alert.py          # Generic webhooks
-    realtime/                     # Realtime monitoring (optional)
-       watcher.py                # File watcher
-    tests/                        # Test suite
-       test_api.py               # API integration tests (16 tests)
-       test_detector.py
-       test_rule_engine.py
-       test_alerts.py
-       ...
-    rules/rules.yaml              # Detection rules (YAML)
- .github/workflows/
-    ci-cd.yml                     # Test, lint, build, push
-    deploy-aws.yml                # AWS ECS deployment
- Dockerfile                        # Multi-stage production build
- docker-compose.yml                # Local orchestration
- requirements.txt                  # Python dependencies
- DEPLOYMENT.md                     # Deployment guide
- SCALING_SUMMARY.md                # Scaling & cost info
- LICENSE                           # MIT License
- README.md                         # This file
-```
 
 ---
 
@@ -118,20 +48,6 @@ curl http://localhost:8000/api/v1/rules/list
 ### Hot-Reload Rules
 ```bash
 curl -X POST http://localhost:8000/api/v1/rules/reload
-```
-
----
-
-##  Rule Definition (YAML)
-
-Create rules in `rules/rules.yaml`:
-
-```yaml
-rules:
-  - id: failed_login
-    pattern: "Failed password|Invalid user"
-    severity: high
-    description: "Suspicious failed login attempt"
 ```
 
 ---
