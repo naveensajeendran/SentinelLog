@@ -61,10 +61,95 @@ Run the main module to scan logs:
 
 ```sh
 cd src
+
+Notes:
+- `requirements.txt` includes runtime and test dependencies (e.g., `requests`, `pytest`, `rich`).
+
+If you plan to run the API or install the package into a virtual environment, create and activate a virtualenv first:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+```
 python -m sentinellog.main
 ```
 
 Ensure your log file (e.g., `logs/sample.log`) contains Linux authentication log entries.
+
+Quick checks:
+- To run a lightweight import sanity check (validates module imports):
+
+```powershell
+cd C:\Users\navee\Desktop\SentinelLog
+python .\tools\import_check.py
+```
+
+---
+
+## Developer Notes (Refactor & Key Concepts)
+
+- **Core package**: The primary parsing, rule engine, detector, and threat representations now live under `src/sentinellog/core/`.
+	- `core/parser.py` returns structured entries (dicts with a `raw` key and optional metadata).
+	- `core/rule_engine.py` loads YAML rule definitions and evaluates log entries, returning `Threat` objects.
+	- `core/detector.py` coordinates parsing and rule evaluation and accepts an optional `rules_path` (falls back to `rules/rules.yaml`). It provides a `run(entries)` helper for tests and programmatic use.
+
+- **Rules**: Rules are stored as YAML files (example path: `rules/rules.yaml`). Each rule should include at least `id` and `pattern` fields.
+
+- **Alerts**: Alert backends (email, Slack, webhook) live under `src/sentinellog/alerts/`. HTTP-based alerters use `requests` (lazy-imported) and will raise a clear error if `requests` is not installed.
+
+- **Real-time watcher**: `src/sentinellog/realtime/watcher.py` provides a `FileWatcher` class (exported as `LogWatcher` for backward compatibility) that tails logs and invokes the detector.
+
+---
+
+## Example rules YAML
+
+Create `rules/rules.yaml` with contents like:
+
+```yaml
+- id: FAILED_LOGIN
+	pattern: "Failed password"
+	level: HIGH
+	metadata:
+		source: auth_log
+
+- id: SUSPICIOUS_IP
+	pattern: "185."
+	level: MEDIUM
+```
+
+---
+
+## Tests
+
+This repository includes unit tests under `src/sentinellog/tests/`. To run tests (after installing `pytest`):
+
+```powershell
+cd src
+python -m pytest -q
+```
+
+If `pytest` is not installed, add it to your environment with `pip install -r requirements.txt`.
+
+---
+
+## Troubleshooting
+
+- Import errors when running scripts: ensure you run modules from the `src` directory or have `src` on `PYTHONPATH`.
+	- Example: `cd src` then `python -m sentinellog.main`.
+- Missing `requests` errors for HTTP alerts: install `requests` (`pip install requests`) or ensure `requirements.txt` is installed.
+
+---
+
+## Contributing
+
+Pull requests and issues are welcome! Please follow standard Python style, include unit tests for new features, and run `pytest` before submitting.
+
+---
+
+## License
+
+MIT License
 
 ---
 

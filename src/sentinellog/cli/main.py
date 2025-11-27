@@ -1,5 +1,5 @@
 import os
-from sentinellog.detector import ThreatDetector
+from sentinellog.core.detector import ThreatDetector
 
 def main():
     base_dir = os.path.dirname(os.path.abspath(__file__))
