@@ -1,21 +1,130 @@
 MIT License
 
-Copyright (c) 2025 Naveen Sajeendran
+Copyright (c) 2025
+SentinelLog Technologies Inc.
+A Gemra Ventures–Associated Company
+Authors and Co-Founders:
+Naveen Sajeendran and Midunan Sivasaravanan
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Permission is granted to licensed users to access and use this product under the terms set by SentinelLog Technologies Inc. No rights are granted to copy, modify, distribute, merge, publish, sublicense, sell, or otherwise transfer any portion of this product without explicit written authorization.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+All copies or substantial portions of this product must retain this copyright notice.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+This product is provided “AS IS,” without warranty of any kind, express or implied, including warranties of merchantability, fitness for a particular purpose, or non-infringement. In no event shall the authors, co-founders, or SentinelLog Technologies Inc. be liable for any damages arising from use of the product.
+
+Use of this product constitutes acceptance of these terms.
+All rights not expressly granted are reserved by SentinelLog Technologies Inc.
+
+SentinelLog Commercial EULA (For Enterprise Customers)
+
+SentinelLog End User License Agreement (EULA)
+Effective Date: January 1, 2025
+Issued by: SentinelLog Technologies Inc., associated with Gemra Ventures
+
+This EULA governs all licensed on-premise or downloadable versions of SentinelLog.
+
+Grant of License
+
+SentinelLog grants the customer a non-exclusive, non-transferable, revocable license to install and use SentinelLog within their organization.
+
+Restrictions
+
+The customer may not:
+• reverse engineer, decompile, or attempt to extract source code
+• redistribute or sublicense SentinelLog
+• provide access to non-employees without written consent
+• modify or create derivative works
+• benchmark or compare publicly without approval
+
+Ownership
+
+SentinelLog remains the exclusive property of
+SentinelLog Technologies Inc.
+Naveen Sajeendran and Midunan Sivasaravanan retain all intellectual property rights.
+
+Confidentiality
+
+All documentation, source code elements, algorithms, threat models, and detection rules are proprietary confidential information.
+
+Termination
+
+If the customer violates this EULA, the license terminates immediately.
+
+SentinelLog SaaS Terms of Service (For hosted cloud customers)
+
+SentinelLog Cloud Terms of Service
+Operated by SentinelLog Technologies Inc., associated with Gemra Ventures
+
+Use of Service
+
+Users receive access to the hosted SentinelLog platform for log ingestion, threat detection, dashboards, and alerts.
+
+Customer Responsibilities
+
+• Not upload malware or harmful content
+• Not exceed rate limits
+• Not misuse SentinelLog to attack third parties
+
+Data Rights
+
+Customers retain ownership of their uploaded logs.
+SentinelLog owns all analytics, detection models, and derived insights.
+
+Service Level
+
+SentinelLog targets 99.5 percent uptime. Outages may occur. No guarantees unless customer purchases an enterprise SLA.
+
+Prohibited Use
+
+Any attempt to copy the platform, extract detection rules, or clone functionality is strictly prohibited.
+
+Dual License Model (Open-Core + Commercial)
+
+You can structure SentinelLog like this:
+
+Community Edition (CE)
+
+• Apache 2.0 or MIT
+• Basic parsing, simple CLI scanner
+• No real-time pipeline
+• No ML models
+• No cloud dashboard
+
+Enterprise Edition (EE)
+
+• Proprietary license (the one above)
+• Real-time Kafka streaming
+• Advanced detection models
+• Multi-user dashboard
+• SOC workflows
+• Enterprise support
+
+This is the same model used by:
+• Elastic Search
+• Redis
+• GitLab
+• MongoDB
+
+Trademark Policy
+
+SentinelLog™, SentinelLog Technologies™, and SentinelCloud™ are trademarks of SentinelLog Technologies Inc., associated with Gemra Ventures.
+
+Users may not:
+• use the names in product branding
+• register similar trademarks
+• create “SentinelLog-compatible” products without permission
+• use the logo in marketing materials without written consent
+
+Fair use examples include academic research, documentation, and unmodified distribution of open-source versions.
+
+Contributor License Agreement (CLA)
+
+SentinelLog Contributor License Agreement (CLA)
+
+By contributing code, documentation, or ideas to SentinelLog, the contributor agrees that:
+• All contributions become the property of SentinelLog Technologies Inc.
+• The contributor grants the company a perpetual, worldwide, irrevocable license to use, modify, sublicense, and distribute contributions.
+• The contributor confirms they wrote the code and have the right to contribute it.
+• No confidential employer code is being added.
+
+Signed electronically upon submitting a pull request.
