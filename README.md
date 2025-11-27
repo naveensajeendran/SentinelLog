@@ -1,10 +1,5 @@
 ﻿# SentinelLog
 
-[![CI/CD](https://github.com/naveensajeendran/SentinelLog/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/naveensajeendran/SentinelLog/actions/workflows/ci-cd.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
-[![FastAPI](https://img.shields.io/badge/fastapi-0.104+-green.svg)](https://fastapi.tiangolo.com/)
-
 A production-ready, lightweight **log analysis and threat detection framework** designed for security engineers, DevOps teams, and security analysts. SentinelLog uses pattern-based rules to detect suspicious activities in logs with minimal overhead, and scales horizontally on AWS ECS Fargate.
 
 ---
@@ -201,21 +196,20 @@ Two GitHub Actions workflows:
 MIT License - See [LICENSE](LICENSE) file for details.
 
 ```
-Copyright (c) 2025 Naveen Sajeendran
+Copyright (c) 2025
+SentinelLog Technologies Inc.
+A Gemra Ventures–Associated Company
+Authors and Co-Founders:
+Naveen Sajeendran and Midunan Sivasaravanan
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Permission is granted to licensed users to access and use this product under the terms set by SentinelLog Technologies Inc. No rights are granted to copy, modify, distribute, merge, publish, sublicense, sell, or otherwise transfer any portion of this product without explicit written authorization.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+All copies or substantial portions of this product must retain this copyright notice.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, either express
-or implied. See the License for the specific language governing permissions and
-limitations under the License.
+This product is provided “AS IS,” without warranty of any kind, express or implied, including warranties of merchantability, fitness for a particular purpose, or non-infringement. In no event shall the authors, co-founders, or SentinelLog Technologies Inc. be liable for any damages arising from use of the product.
+
+Use of this product constitutes acceptance of these terms.
+All rights not expressly granted are reserved by SentinelLog Technologies Inc.
 ```
 
 ---
@@ -234,5 +228,5 @@ Contributions are welcome! Fork, create a branch, commit, and open a PR.
 
 ---
 
-**Made with  by Naveen Sajeendran**  
+**Made by Naveen Sajeendran**  
 *Security threat detection, simplified.*
