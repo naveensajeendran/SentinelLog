@@ -36,24 +36,6 @@ SentinelLog/
 ├── pyproject.toml
 ├── setup.cfg
 └── readMe.txt
-```
-
----
-
-## Installation
-
-Clone the repository:
-
-```sh
-git clone https://github.com/yourusername/SentinelLog.git
-cd SentinelLog
-```
-
-Install dependencies:
-
-```sh
-pip install -r requirements.txt
-```
 
 ## Usage
 
